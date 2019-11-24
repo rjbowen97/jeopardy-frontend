@@ -6,7 +6,7 @@ export class Question {
     public column: string
     public row: string
 
-    deserialize(data: any) {
+    fromSerializedData(data: any) {
         Object.assign(this, data);
     }
 }

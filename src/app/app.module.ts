@@ -4,17 +4,31 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MainGameComponent } from './main-game/main-game.component';
 import { QuestionComponent } from './question/question.component';
-import { QuestionDisplayComponent } from './question-display/question-display.component';
+import { MainGameAnswerInputComponent } from './main-game-answer-input/main-game-answer-input.component';
+
+import { MainGameQuestionComponent } from './main-game-question/main-game-question.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MainGameComponent,
     QuestionComponent,
-    QuestionDisplayComponent
+    MainGameQuestionComponent,
+    MainGameAnswerInputComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
