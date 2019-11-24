@@ -9,7 +9,6 @@ import { SocketIOService } from '../socket-io.service';
 export class MainGameComponent implements OnInit {
 
   constructor(socketIOService: SocketIOService) {
-    socketIOService.socket.on("newQuestionLoopTickUpdate", (data) => console.log(data));
   }
 
   ngOnInit() {
