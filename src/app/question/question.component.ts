@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SocketIOService } from '../socket-io.service';
 import { Question } from '../models/Question.model';
 
 @Component({
@@ -8,14 +7,11 @@ import { Question } from '../models/Question.model';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
-
   @Input() question: Question;
 
   constructor() {
-    
   }
 
   ngOnInit() {
   }
-
 }

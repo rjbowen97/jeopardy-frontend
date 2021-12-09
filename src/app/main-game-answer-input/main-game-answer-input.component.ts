@@ -7,16 +7,12 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
   styleUrls: ['./main-game-answer-input.component.css']
 })
 export class MainGameAnswerInputComponent implements OnInit {
-
-
   public answerInputForm: FormGroup
 
-  constructor(private formBuilder: FormBuilder) {
-
-  }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.answerInputForm = this.formBuilder.group({answer: ['', [Validators.required, Validators.minLength(3)]]})
+    this.answerInputForm = this.formBuilder.group({ answer: ['', [Validators.required, Validators.minLength(3)]] })
   }
 
   onSubmit(formValue: any) {
