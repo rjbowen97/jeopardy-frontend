@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-main-game-answer-input',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainGameAnswerInputComponent implements OnInit {
 
-  constructor() { }
+
+  public answerInputForm: FormGroup
+
+  constructor(private formBuilder: FormBuilder) {
+
+  }
 
   ngOnInit() {
+    this.answerInputForm = this.formBuilder.group({answer: ['', [Validators.required, Validators.minLength(3)]]})
+  }
+
+  onSubmit(formValue: any) {
+    console.log(formValue);
   }
 
 }
